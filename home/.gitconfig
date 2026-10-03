@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[core]
+	excludesfile = ~/.config/git/ignore
+	quotepath = false
+# user.name / user.email は公開しないよう ~/.gitconfig.local に書く
+[include]
+	path = ~/.gitconfig.local

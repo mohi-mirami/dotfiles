@@ -48,4 +48,18 @@ launchctl bootstrap "gui/$(id -u)" "$plist"
 osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true' 2>/dev/null \
   || defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 
+# --- Dock ---
+# 自動的に表示/非表示
+defaults write com.apple.dock autohide -bool true
+# 並び順を dock-apps.txt（scripts/dock-save.sh で保存）から復元
+dock_list="$(cd "$(dirname "$0")/.." && pwd)/dock-apps.txt"
+if [ -s "$dock_list" ] && command -v dockutil >/dev/null 2>&1; then
+  dockutil --remove all --no-restart >/dev/null
+  while IFS= read -r app; do
+    [ -e "$app" ] && dockutil --add "$app" --section apps --no-restart >/dev/null
+  done < "$dock_list"
+  dockutil --add "$HOME/Downloads" --view fan --display stack --section others --no-restart >/dev/null
+fi
+killall Dock 2>/dev/null || true
+
 echo "macOS 設定を適用しました。トラックパッド等が反映されない場合は一度ログアウトしてください。"

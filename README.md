@@ -10,12 +10,13 @@ GNU Stow + Brewfile + `defaults` スクリプトの最小構成にしていま�
 | トラックパッド | タップでクリック / 軌跡の速さ最速 / クリック弱い | 自動 (`scripts/macos-defaults.sh`) |
 | キーボード | Caps Lock → Control / 標準のファンクションキー | 自動 (同上) |
 | 外観 | ダークモード | 自動 (同上) |
+| Dock | 自動的に隠す / 並びを `dock-apps.txt` から復元 | 自動 (同上) |
 | ディスプレイ | スペースを拡大 | **手動** |
 | ユーザ辞書 | メアドなど | **手動** (旧 Mac から書き出し) |
 | App Store | アカウント新規作成・サインイン | **手動** |
 | Xcode CLT / Homebrew | インストール、PATH、`brew update` | 自動 (`setup.sh`) |
-| アプリ | Clipy, Rectangle, Slack, Cursor, Notion, Discord, Claude, Notion Calendar, Hyper | 自動 (`Brewfile`) |
-| Brew 以外のアプリ | LINE, Spark (App Store) / Messenger (Web) | 自動 (`mas`) / 手動 |
+| アプリ | Clipy, Rectangle, Slack, Cursor, Notion, Discord, Claude, Notion Calendar, Hyper, Chrome, VS Code, Antigravity, Microsoft Office, Teams | 自動 (`Brewfile`) |
+| Brew 以外のアプリ | LINE, Spark (App Store) / Messenger (Web) / Gemini | 自動 (`mas`) / 手動 |
 | シェル | oh-my-zsh, `.zshrc`, `.zprofile` | 自動 |
 | Git | `.gitconfig`, SSH 鍵, GitHub 認証 | 一部手動 |
 
@@ -100,6 +101,9 @@ brew bundle --file=~/dotfiles/Brewfile
 
 # 設定ファイルを増やす: home/ に置いて
 cd ~/dotfiles && stow --no-folding --target="$HOME" home
+
+# Dock の並びを保存（次の Mac でも同じ並びになる）
+~/dotfiles/scripts/dock-save.sh && cd ~/dotfiles && git add dock-apps.txt && git commit -m "Save Dock layout" && git push
 
 # macOS 設定の再適用
 ~/dotfiles/scripts/macos-defaults.sh

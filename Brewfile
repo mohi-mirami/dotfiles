@@ -3,6 +3,7 @@ brew "git"
 brew "gh"
 brew "stow"
 brew "mas"
+brew "dockutil"
 
 # アプリ (Homebrew Cask)
 cask "clipy"
@@ -14,6 +15,12 @@ cask "discord"
 cask "claude"
 cask "notion-calendar"
 cask "hyper"
+cask "google-chrome"
+cask "visual-studio-code"
+cask "antigravity"
+cask "microsoft-office"
+cask "microsoft-teams"
+# Gemini アプリ: Homebrew での配布を確認できていないため手動でインストール
 
 # App Store アプリ (事前に App Store へサインインが必要)
 mas "LINE", id: 539883307

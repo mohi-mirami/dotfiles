@@ -31,6 +31,8 @@ cd "$DOTFILES_DIR"
 
 # 4. アプリ一括インストール
 log "brew bundle"
+# 手動でインストール済みのアプリがあれば、上書きせず Homebrew の管理下に取り込む
+export HOMEBREW_CASK_OPTS="--adopt"
 brew bundle --file="$DOTFILES_DIR/Brewfile" || echo "一部失敗しました（App Store 未サインインなら mas が失敗します）。後で再実行してください。"
 
 # 5. oh-my-zsh

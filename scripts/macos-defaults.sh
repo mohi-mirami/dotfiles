@@ -62,4 +62,7 @@ if [ -s "$dock_list" ] && command -v dockutil >/dev/null 2>&1; then
 fi
 killall Dock 2>/dev/null || true
 
+# --- アプリのショートカット ---
+"$(dirname "$0")/app-shortcuts.sh"
+
 echo "macOS 設定を適用しました。トラックパッド等が反映されない場合は一度ログアウトしてください。"

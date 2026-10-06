@@ -10,6 +10,7 @@ GNU Stow + Brewfile + `defaults` スクリプトの最小構成にしていま�
 | トラックパッド | タップでクリック / 軌跡の速さ最速 / クリック弱い | 自動 (`scripts/macos-defaults.sh`) |
 | キーボード | Caps Lock → Control / 標準のファンクションキー | 自動 (同上) |
 | 外観 | ダークモード | 自動 (同上) |
+| PowerPoint | 独自ショートカット13個（`scripts/app-shortcuts.sh`） | 自動（PowerPoint を一度起動した後） |
 | Dock | 自動的に隠す / 並びを `dock-apps.txt` から復元 | 自動 (同上) |
 | ディスプレイ | スペースを拡大 | **手動** |
 | ユーザ辞書 | メアドなど | **手動** (旧 Mac から書き出し) |

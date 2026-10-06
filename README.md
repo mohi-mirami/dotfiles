@@ -1,7 +1,7 @@
 # dotfiles
 
 MacBook Pro → MacBook Air 移行用の dotfiles と移行手順。
-[schroneko/dotfiles](https://github.com/schroneko/dotfiles) を参考に、GNU Stow + Brewfile + `defaults` スクリプトの最小構成にしています。
+GNU Stow + Brewfile + `defaults` スクリプトの最小構成にしています。
 
 ## 要件整理
 

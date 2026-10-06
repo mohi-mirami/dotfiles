@@ -62,6 +62,14 @@ if [ -s "$dock_list" ] && command -v dockutil >/dev/null 2>&1; then
 fi
 killall Dock 2>/dev/null || true
 
+# --- iTerm2 ---
+# 設定を dotfiles の iterm2/ フォルダから読み込む（iTerm を終了した状態で実行すること）
+iterm_dir="$(cd "$(dirname "$0")/.." && pwd)/iterm2"
+if [ -f "$iterm_dir/com.googlecode.iterm2.plist" ]; then
+  defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$iterm_dir"
+  defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+fi
+
 # --- アプリのショートカット ---
 "$(dirname "$0")/app-shortcuts.sh"
 

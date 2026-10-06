@@ -11,6 +11,7 @@ GNU Stow + Brewfile + `defaults` スクリプトの最小構成にしていま�
 | キーボード | Caps Lock → Control / 標準のファンクションキー | 自動 (同上) |
 | 外観 | ダークモード | 自動 (同上) |
 | PowerPoint | 独自ショートカット13個（`scripts/app-shortcuts.sh`） | 自動（PowerPoint を一度起動した後） |
+| iTerm2 | 設定を `iterm2/` フォルダから読み込む | 自動（iTerm を終了した状態で実行） |
 | Dock | 自動的に隠す / 並びを `dock-apps.txt` から復元 | 自動 (同上) |
 | ディスプレイ | スペースを拡大 | **手動** |
 | ユーザ辞書 | メアドなど | **手動** (旧 Mac から書き出し) |

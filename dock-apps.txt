@@ -1,0 +1,17 @@
+/Applications/Google Chrome.app
+/Applications/Notion.app
+/Applications/Slack.app
+/Applications/Antigravity.app
+/Applications/Cursor.app
+/Applications/Discord.app
+/Applications/Microsoft Outlook.app
+/Applications/Notion Calendar.app
+/Applications/Spark Desktop.app
+/Applications/Figma.app
+/System/Applications/Photos.app
+/Applications/iTerm.app
+/Applications/LINE.app
+/Applications/Zotero.app
+/Applications/Amazon Kindle.app
+/Applications/ToDo.app
+/System/Applications/iPhone Mirroring.app

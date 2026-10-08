@@ -72,6 +72,7 @@ home/                     # $HOME にシンボリックリンクされるファ�
 - [ ] **ユーザ辞書**: システム設定 → キーボード → ユーザ辞書 に `ユーザ辞書.plist` をドラッグ
 - [ ] **Caps Lock → Control の確認**: 効いていなければ システム設定 → キーボード → キーボードショートカット → 修飾キー で設定
 - [ ] **Messenger**: Mac 版アプリは提供終了のため <https://www.messenger.com> を利用
+- [ ] **Google Drive**: 起動して Google アカウントでログインし、同期方法（ストリーミング／ミラーリング）を選ぶ
 - [ ] **各アプリにログイン**: Slack, Notion, Discord, Claude, Cursor, LINE, Spark
 - [ ] **Clipy / Rectangle**: 起動してアクセシビリティ権限を許可、ログイン時に起動を ON
 

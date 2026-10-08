@@ -70,6 +70,16 @@ if [ -f "$iterm_dir/com.googlecode.iterm2.plist" ]; then
   defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 fi
 
+# --- Microsoft Office: フォントテーマ ---
+# office/theme-fonts/ の XML を Office のユーザーテーマフォルダにコピーする
+office_dir="$HOME/Library/Group Containers/UBF8T346G9.Office"
+theme_src="$(cd "$(dirname "$0")/.." && pwd)/office/theme-fonts"
+if [ -d "$office_dir" ] && [ -d "$theme_src" ]; then
+  theme_dst="$office_dir/User Content.localized/Themes.localized/Theme Fonts"
+  mkdir -p "$theme_dst"
+  cp "$theme_src"/*.xml "$theme_dst"/
+fi
+
 # --- アプリのショートカット ---
 "$(dirname "$0")/app-shortcuts.sh"
 
